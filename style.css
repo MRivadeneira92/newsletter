@@ -7,6 +7,10 @@
     font-family: Roboto-Regular;
 }
 
+html, body, main {
+    height: 100%;
+}
+
 @font-face {
     font-family: Roboto-Regular;
     src: url(./assets/fonts/Roboto-Regular.ttf);
@@ -17,18 +21,37 @@ body {
 }
 
 .container {
-    margin: 10px auto;
+    margin: 50px auto;
     background-color: hsl(0, 0%, 100%);
     padding: 2vh;
-    width: fit-content;
+    width: 55%;
     border-radius: 30px;
     display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#subscribe-image {
+    width: 100%;
+    height: auto;
+}
+
+#subscribe-image img {
+    width: 100%;
+    height: auto;
 }
 
 #subscribe-form {
-    flex-direction: column;
+    display: flex;
+    flex-direction: row;
     text-align: center;
-    padding: 4rem;
+    padding: 5px;
+}
+
+#subscribe-text {
+    padding-top: 50px;
+    margin: 0 40px;    
+    width: 100%;
 }
 
 #subscribe-success {
@@ -37,13 +60,14 @@ body {
 
 h1 {
     font-weight: 700;
-    font-size: 48px;
-    margin-bottom: 2rem;
+    font-size: 44px;
+    margin-bottom: 1rem;
     color: hsl(234, 29%, 20%);
 }
 
 p {
     margin-bottom: 1rem;
+    font-size: 12px;
 }
 
 ul {
@@ -55,6 +79,7 @@ ul {
 
 ul li {
     margin-bottom: 1rem;
+    font-size: 14px;
 }
 
 ul li img {
@@ -69,16 +94,27 @@ input[type="email"] {
 }
 
 input[type="email"]:focus {
-    border: none;
+    outline: none;
 }
+
 input[type="email"]:invalid {
     background-color: rgb(214, 163, 163);
     border: red solid 1px;
 }
 
+#invalid-email {
+    color: rgb(214, 163, 163);
+}
+
 form {
     display: flex;
     flex-direction: column;
+}
+
+#form-labels {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
 
 button {
@@ -93,6 +129,7 @@ button:hover {
     background: rgb(255,84,120);
     background: linear-gradient(90deg, rgba(255,84,120,1) 0%, rgba(255,105,62,1) 100%);
     box-shadow: 0px 12px 13px 2px rgba(255,84,120,1);
+    cursor: pointer;
 }
 
 label {
