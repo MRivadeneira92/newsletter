@@ -16,11 +16,11 @@
 </head>
 <body>
   <main>
-    <div class="container">
+    <div class="container" id="container">
       <div id="subscribe-form">
         <div id="subscribe-text">
           <h1>Stay updated!</h1>
-          <p>Join 60,000+ product managers receiving monthly updates on:</p>
+          <p class="text">Join 60,000+ product managers receiving monthly updates on:</p>
           <ul>
             <li><img src="./assets/images/icon-list.svg" alt="checklist"><p>Product discovery and building what matters</p></li>
             <li><img src="./assets/images/icon-list.svg" alt="checklist"><p>Measuring to ensure updates are a success</p></li>
@@ -36,7 +36,6 @@
           </form>
         </div>
         <div id="subscribe-image">
-        <img src="./assets/images/illustration-sign-up-desktop.svg" alt="div image">
         </div>
       </div>
       <div id="subscribe-success">
@@ -65,6 +64,7 @@
       document.getElementById("subscribe-success").style.display="block";
       var userMail = emailInput.value;
       document.getElementById("user-mail").innerHTML=userMail;
+      document.getElementById("container").style.width="404px"
     }
     else {
       console.log("Wrong");
