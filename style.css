@@ -127,10 +127,14 @@ label {
     justify-content: space-between;
 }
 
-#subscribe-image {
+#subscribe-image-desk {
     width: 400px;
     height: 593px;
     background-image: url(./assets/images/illustration-sign-up-desktop.svg);
+}
+
+#subscribe-image-mobile {
+    display: none;
 }
 
 #subscribe-text {
@@ -185,9 +189,15 @@ label {
         padding-top: 150px;
     }
 
-    #subscribe-image {
-        position: relative;
-        margin-bottom: 50%;
+    #subscribe-image-desk {
+        display: none;
+    }
+
+    #subscribe-image-mobile {
+        display: block;
+        width: 375px;
+        height: 284px;
+        background-image: url(./assets/images/illustration-sign-up-mobile.svg);
     }
 
     #subscribe-success img {
@@ -199,8 +209,8 @@ label {
         text-align: left;
     }
 
-    button { 
-        position: relative;
-        margin-top: 100%;
+    p {
+        font-size: 16px;
+        line-height: 150% !important;
     }
 }

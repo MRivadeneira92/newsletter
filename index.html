@@ -35,8 +35,8 @@
             <button type="button" id="btn-subscribe" onClick="subscribe()">Subscribe to monthly newsletter</button>
           </form>
         </div>
-        <div id="subscribe-image">
-        </div>
+        <div id="subscribe-image-desk"></div>
+        <div id="subscribe-image-mobile"></div>
       </div>
       <div id="subscribe-success">
         <img src="./assets/images/icon-success.svg" alt="success icon">
@@ -59,7 +59,6 @@
   btnSubscribe = document.getElementById("btn-subscribe");
   function subscribe() {
     if (emailInput.checkValidity() == true && emailInput.value != "") {
-      console.log("Ok");
       document.getElementById("subscribe-form").style.display="none";
       document.getElementById("subscribe-success").style.display="block";
       var userMail = emailInput.value;
